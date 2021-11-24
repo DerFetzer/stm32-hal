@@ -77,6 +77,9 @@ void = { version = "1.0.2", default-features = false }  # One off in `timer.rs`.
 cfg-if = "1.0.0"  # if/else blocks for feature-gating
 paste = "1.0.4"  # Token pasting, to make macros easier
 
+[patch.crates-io]
+stm32g0 = { git = "https://github.com/DerFetzer/stm32g0" }
+
 [package.metadata.docs.rs]
 features = ["l4x3", "l4rt", "can", "usb", "embedded-hal"]
 targets = ["thumbv7em-none-eabihf"]
