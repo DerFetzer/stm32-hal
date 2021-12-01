@@ -284,7 +284,14 @@ impl RccPeriph for pac::SPI1 {
     }
 }
 
-#[cfg(not(any(feature = "f3x4", feature = "wb", feature = "wl")))]
+#[cfg(not(any(
+    feature = "f3x4",
+    feature = "wb10",
+    feature = "wb15",
+    feature = "wb30",
+    feature = "wb35",
+    feature = "wb50",
+    feature = "wl")))]
 impl RccPeriph for pac::SPI2 {
     fn en_reset(rcc: &RegisterBlock) {
         rcc_en_reset!(apb1, spi2, rcc);
